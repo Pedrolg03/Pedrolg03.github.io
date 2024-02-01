@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario con Etiquetas HTML</title>
+    <Style>
+        body{
+            background: linear-gradient(
+                #4e2394, #DBC9F5
+            );
+            
+        }
+        .centrado{
+            text-align: center;
+        }
+        h2{
+            color: white;
+            text-align: centers;
+        }
+        table{
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 40%;
+            background-color: white;
+            margin: 3% auto;
+        }
+        td, th{
+            border: 2px solid #000000;
+            text-align: center;
+            padding: 9px;
+    
+        }
+        fieldset{
+            width: 30%;
+            color: white;
+            border-color: #000000;
+            border: 3px solid;
+            text-align: left;
+            
+            
+        }
+        header{
+            width: 400px;
+            height: 50px;
+            
+        }
+        
+       
+    </Style>
+</head>
+<body>
+
+    <h2 class="centrado">Formulario con Etiquetas HTML</h2>
+    
+
+    <form action="/action_page.php">
+                
+        <fieldset>
+            <legend>Usuario::</legend>
+            <label for="fname"> Nombre:</label>
+            <input type="text" id="fname" name="fname"><br><br>
+            <label for="lname"> Apellido:</label>
+            <input type="text" id="lname" name="lname"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="birthday">Cumpleaños:</label>
+            <input type="date" id="birthday" name="birthday"><br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+        <fieldset>
+            <legend>Caracteristicas</legend>
+            <lebel> Color favorito: <input type="color"></lebel><br><br>
+            <p>Estado Civil: </p>
+            <lavel> <input type="radio" name="opcion"> Casado</lavel>
+            <lavel> <input type="radio" name="opcion"> Soltero</lavel>
+            <lavel> <input type="radio" name="opcion"> Divorciado</lavel>
+            <p>Idiomas dominados: </p>
+            <lavel> <input type="radio" name="opcion0"> Español</lavel><br>
+            <lavel> <input type="radio" name="opcion1"> Ingles</lavel><br>
+            <lavel> <input type="radio" name="opcion2"> Frances</lavel><br>
+            <lavel> <input type="radio" name="opcion3"> Otros</lavel><br>
+            <p>Disposicion horaria: </p>
+            <label>0h <input type="range"> 10h</label>
+        </fieldset>
+        <fieldset>
+            <legend>Terminos de privacidad: </legend>
+            <P>Por motivos de seguridad es importante que el programa acceda
+            a su equipo cree y modifique las carpetas para su correcto 
+            funcionamiento</P>
+                <label><input type="checkbox"> Aceptar.</label>
+        </fieldset>
+        
+       
+      </form>
+    
+
+    <form action="/procesar_formulario" method="post">
+       
+        <table>
+            <tr>
+                <th>checkbox</th>
+                <th><label><input type="checkbox"> Estoy de acuerdo.</label><br>
+                <label><input type="checkbox"> No estoy de acuerdo.</label><br></th>
+                <th>Casilla de verificacion</th>
+            </tr>
+            <tr>
+                <th>Color</th>
+                <th><label><input type="color"> Color</label><br></th>
+                <th>Selector de color</th>
+            </tr>
+            <tr>
+                <th>Date</th>
+                <th><label><input type="date">Fecha</label><br></th>
+                <th>Selecdtor de fecha</th>
+            </tr>
+            <tr>
+                <th>Datatime-Local</th>
+                <th><label><input type="datetime-local">Fecha y Hora</label><br></th>
+                <th>Selctor de fecha y hora local</th>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <th><label><input type="email"> Corre@.com</label><br></th>
+                <th>Correo Electronico</th>
+            </tr>
+            <tr>
+                <th>File</th>
+                <th><label><input type="file"></label><br></th>
+                <th>Subir Archivo</th>
+            </tr>
+            <tr>
+                <th>Hidden</th>
+                <th><input type="hidden" name="campo_oculto" value="Valor Oculto"><!-- Campo Oculto --><br></th>
+                <th>Campo oculto</th>
+            </tr>
+            <tr>
+                <th>Imagen</th>
+                <th><label><input type="image" src="./Imagenes/descarga.png"></label><br></th>
+                <th>Una imagen como boton</th>
+            </tr>
+            <tr>
+                <th>Month</th>
+                <th> <label><input type="month"> Mes y Año</label><br></th>
+                <th>Selector de mes y año</th>
+            </tr>
+            <tr>
+                <th>Number</th>
+                <th><label><input type="number"> nº</label><br></th>
+                <th>Campo numerico</th>
+            </tr>
+            <tr>
+                <th>Password</th>
+                <th><label><input type="password"> Password</label><br></th>
+                <th>Contraseña</th>
+            </tr>
+            <tr>
+                <th>Radio</th>
+                <th><label><input type="radio" name="opcion">Casado</label>
+                    <label><input type="radio" name="opcion">Soltero</label>
+                    <label><input type="radio" name="opcion">Divorciado</label></th>
+                <th>Opcion de Radio 1</th>
+            </tr>
+            <tr>
+                <th>Range</th>
+                <th><label><input type="range"></label><br></th>
+                <th>Barra de rango</th>
+            </tr>
+            <tr>
+                <th>Reset</th>
+                <th><input type="reset" value="Restablecer"><!-- Botón de Restablecer --><br></th>
+                <th>Boton de restablecer</th>
+            </tr>
+            <tr>
+                <th>search</th>
+                <th><label><input type="search"> Buscar</label><br></th>
+                <th>Campo de busqueda</th>
+            </tr>
+            <tr>
+                <th>Submit</th>
+                <th><input type="submit" value="Enviar"><!-- Botón de Envío --><br></th>
+                <th>Boton de envío</th>
+            </tr>
+            <tr>
+                <th>Tel</th>
+                <th><label><input type="tel"> Tlf</label><br></th>
+                <th>Numero de teléfono</th>
+            </tr> 
+            <tr>
+                <th>Text</th>
+                <th><label><input type="text"> Texto</label><br></th>
+                <th>Campo de Texto</th>
+            </tr>
+            <tr>
+                <th>Time</th>
+                <th><label><input type="time"> Hora</label><br></th>
+                <th>Selector de hora</th>
+            </tr>
+            <tr>
+                <th>Url</th>
+                <th><label><input type="url"> URL</label><br></th>
+                <th>URL</th>
+            </tr>
+            <tr>
+                <th>Week</th>
+                <th><label><input type="week"></label><br></th>
+                <th>Selector de semana</th>
+            </tr>
+
+        </table>
+    </form>
+   
+</body>
+</html>

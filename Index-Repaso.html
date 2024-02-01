@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .root{
+            --color-principal: rgb(240, 11, 171);
+            --fuente-principal: 'Roboto', sans-serift;
+        }
+        .parrafo{
+            color:var(--color-principal);
+            font-family:var(--fuente-principal);
+        }
+        .aceptar{
+            background-color: green;
+        }
+        .eliminar{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <p class="parrafo" >Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima repellat pariatur in itaque ducimus consectetur quasi unde modi quod veritatis dolor officiis quas possimus, enim libero!
+        Quam unde laboriosam, accusantium ipsam, exercitationem quibusdam laborum ipsa, architecto vel doloremque aperiam. Maxime magni libero nulla ipsum assumenda quo incidunt autem a cupiditate.
+    </p>
+
+    <button class="aceptar">Aceptar</button>
+    <button class="eliminar">Eliminar</button>
+
+    <!-- Counter for button click -->
+<p>Click count: <span id="clickCount">0</span></p>
+
+<!-- Button to increment counter -->
+<input type="button" value="Increment" onclick="incrementCounter()">
+
+<!-- Other input types -->
+<input type="checkbox">
+<input type="color">
+<input type="date">
+<input type="datetime-local">
+<input type="email">
+<input type="file">
+<input type="hidden">
+<input type="image">
+<input type="month">
+<input type="number">
+<input type="password">
+<input type="radio">
+<input type="range">
+<input type="reset">
+<input type="search">
+<input type="submit">
+<input type="tel">
+<input type="text">
+<input type="time">
+<input type="url">
+<input type="week">
+
+<script>
+  // Counter variable
+  let clickCounter = 0;
+
+  // Function to increment the counter and update the display
+  function incrementCounter() {
+    clickCounter++;
+    document.getElementById('clickCount').textContent = clickCounter;
+  }
+</script>
+</body>
+</html>
